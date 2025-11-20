@@ -1,0 +1,50 @@
+/* Custom Main CSS - เฉพาะ Background และ Font */
+
+/* ===== Background ===== */
+:is(html, body, .appMount__51fd7) {
+  background: none;
+}
+
+.app_a3002d {
+  background: var(--hsl-background-shading);
+  color: rgba(0, 0, 0, 0);
+}
+
+.app__160d8 {
+  background: hsl(from var(--hsl-background-shading) h s l / calc(var(--background-shading-percent) * 0.1));
+}
+
+.bg__960e4 {
+  background: var(--background-image) var(--background-position) / var(--background-size) no-repeat;
+  background-attachment: var(--background-attachment);
+  filter: var(--background-filter);
+  z-index: -1;
+}
+
+.container_a2f514 {
+  background: var(--hsl-background-shading);
+}
+
+/* ===== Font ===== */
+::-moz-placeholder {
+  font-family: var(--main-font);
+}
+
+body,
+button,
+input,
+select,
+textarea,
+::placeholder {
+  font-family: var(--main-font);
+}
+
+code {
+  font-family: var(--code-font);
+}
+
+/* ===== HSL Variables ===== */
+:is(.theme-light, .theme-dark, .theme-darker, .theme-midnight),
+:is(.theme-light, .theme-dark, .theme-darker, .theme-midnight):is(.theme-light, .theme-dark) {
+  --hsl-background-shading: hsl(from var(--background-shading) h calc(var(--saturation-factor, 1) * s) l / alpha);
+}
